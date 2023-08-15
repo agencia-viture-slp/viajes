@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+.buttons button {
+  font-size: 1rem;
+}
+h1 {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  z-index: 30;
+}
+nav {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%); */
+}
+.nav__menu-bar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+  padding-right: 8px;
+  z-index: 30;
+}
+.nav__menu-bar div {
+  width: 40px;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.2s ease-out;
+}
+.is-rotated {
+  width: 40px;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+  transform: rotate(45deg) translatey(160%);
+}
+.is-rotated2 {
+  width: 40px;
+  height: 4px;
+  background-color: green;
+  border-radius: 2px;
+  transform: rotate(-45deg) translatey(-180%);
+}
+.is-gone {
+  display: none;
+}
+.nav__menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  row-gap: 24px;
+  right: -100%;
+  padding: 24px 16px;
+  transition: all 0.2s;
+  z-index: 10;
+  align-items: center;
+}
+.nav__menu-list.active {
+  right: 0;
+  height: 100vh;
+  top: 0;
+  background-color: #fff1da;
+}
+.nav__link {
+  font-size: 18px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.nav__link:hover {
+  font-weight: bold;
+}
+
+.center {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .nav__menu-bar {
+    display: none;
+  }
+  .nav__menu-list {
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    width: fit-content;
+    column-gap: 24px;
+    align-items: center;
+  }
+  .nav__link::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 6px;
+    bottom: -16px;
+    left: 0;
+    background-color: black;
+    transition: all 0.2s;
+  }
+
+  .nav__link:hover:before {
+    width: 100%;
+  }
+}
+.section-header {
+  position: relative;
+  background-image: url('https://vamosalaplayaslp.github.io/viajes/bgcolor.png'),
+    url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+  background-position: -22% 35%, 100% 0%;
+  background-size: auto, auto;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, scroll;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+.hero {
+  display: grid;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  padding-top: 20px;
+}
+.hero img {
+  max-width: 100%;
+}
+.pre-header {
+  color: #df6951;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: #df6951;
+  text-decoration: underline;
+}
+.btn {
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #f1a501;
+  color: white;
+}
+.btn2 {
+  border: none;
+  background: transparent;
+}
+.pre-header {
+  font-size: 2.1rem;
+}
+.search h2 {
+  font-size: 2.1rem;
+  color: #ffffff;
+}
+.search {
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+}
+@media screen and (max-width: 991px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bgcolor.png'),
+      url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: -167% 45%, 100% 159%;
+    background-size: auto, auto;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll, scroll;
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1330px) {
+  .pre-header {
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1034px) {
+  .pre-header {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  .search h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 372px) {
+  .search h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 916px) {
+  .pre-header {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .pre-header {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 732px) {
+  .pre-header {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 608px) {
+  .pre-header {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 452px) {
+  .pre-header {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 395px) {
+  .pre-header {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 335px) {
+  .pre-header {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: 233% 38%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: 333% 38%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 769px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: 533% 38%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 749px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: 733% 38%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 727px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: 1233% 38%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 707px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: 118px 38%;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 417px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: -86px -158px;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 336px) {
+  .section-header {
+    background-image: url('https://vamosalaplayaslp.github.io/viajes/bg.svg');
+    background-position: -86px -158px;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 536px) {
+  .section-header {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+}
+@media screen and (max-width: 732px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero img {
+    width: 200px;
+    height: 200px;
+  }
+  .pre-header {
+    text-align: center;
+  }
+  .title {
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+header img {
+  padding-top: 9px;
+}
+.hidden {
+  display: none;
+}
+
+.search {
+  display: flex;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #f1a501;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+.cards {
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.7rem;
+  justify-items: center;
+}
+.card {
+  width: 100%;
+}
+.card img {
+  border-radius: 10px;
+}
+.css-tr4s17-option {
+  background-color: transparent !important;
+  color: black !important;
+  box-sizing: border-box !important;
+  border: 1px solid rgb(214, 213, 213);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-header-star {
+  display: flex;
+  align-items: center;
+}
+.card-image {
+  position: relative;
+}
+.card-buttons {
+  position: absolute;
+  top: 83%;
+  right: 5px;
+}
+.whatsapp {
+  width: 40px;
+  height: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  border: 2px solid white;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 7px;
+}
+.adult {
+  display: flex;
+  gap: 1rem;
+}
+.kid {
+  display: flex;
+  gap: 1rem;
+}
+.fecha {
+  border-bottom: 2px solid #f1a501;
+}
+.card {
+  border-radius: 10px;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+.card:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 30%;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+  will-change: opacity;
+}
+.card:before {
+  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.2);
+}
