@@ -12,7 +12,7 @@ export default function TripCard({ data }) {
             />
             <div className="card-buttons">
               <a
-                href={`https://wa.me/+524686896643?text=Hola,%0a%0aestoy interesado en el viaje hacia ${element.label} en el hotel ${element.hotel} para las fechas del ${element.fecha_inicio} al ${element.fecha_final}`}
+                href={`https://wa.me/+524681133327?text=Hola,%0a%0aestoy interesado en el viaje hacia ${element.label} en el hotel ${element.hotel} para las fechas del ${element.fecha_inicio} al ${element.fecha_final}`}
               >
                 <button className="whatsapp">
                   <i className="fa fa-whatsapp my-float"></i>
